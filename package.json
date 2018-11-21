@@ -17,7 +17,7 @@
     "prerelease": "npm run build",
     "publish:docs": "node ./scripts/publishdocs.js",
     "release": "sh ./scripts/release.sh",
-    "start": "ng serve --aot -o --port 5000 --host 0.0.0.0",
+    "start": "ng serve",
     "serve:docs": "compodoc --serve --open --output=\"docs/\"",
     "test": "ng test",
     "test:single-run": "ng test --watch false"
@@ -27,8 +27,7 @@
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
     "ngx-editor",
-    "angular2-wysiwyg-editor",
-    "angular4-wysiwyg-editor"
+    "ngx-editor2"
   ],
   "repository": {
     "type": "git",
