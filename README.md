@@ -87,21 +87,24 @@ Documentation is auto-generated using [compodoc][compodoc], and can be viewed he
 
 ## Contributors
 
-* sibiraj-s
-* ssuperczynski
-* https://github.com/khernik93
-* https://github.com/mzsolt1
-* https://github.com/magicben
-* https://github.com/Norddeutschland
+A special thanks to all of our contributors! To contribute yourself just submit a [pull request](https://github.com/jrquick17/ngx-text-editor/pulls)!
+
+* [jrquick17](https://github.com/jrquick17)
+* [khernik93](https://github.com/khernik93)
+* [mzsolt1](https://github.com/mzsolt1)
+* [magicben](https://github.com/magicben)
+* [Norddeutschland](https://github.com/Norddeutschland)
+* [sibiraj-s](https://github.com/sibiraj-s)
+* [ssuperczynski](https://github.com/)
 
 ## To Do
 
-* Add CHANGELOG
 * Create demo directory
 * Add ng-packagr
 * Support for Angular 2-7
+* Release on NPM
 * Support for Angular 8+
+* Release on NPM
 * Update README
 * Update stackblitz
 * Deploy demo website
-* Release on NP, Yarn
