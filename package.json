@@ -1,6 +1,6 @@
 {
-  "name": "ngx-editor2",
-  "version": "5.0.0",
+  "name": "ngx-text-editor",
+  "version": "1.0.0",
   "description": "WYSIWYG Editor for Angular Applications",
   "license": "MIT",
   "scripts": {
@@ -25,8 +25,7 @@
     "angular-editor",
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
-    "ngx-editor",
-    "ngx-editor2"
+    "ngx-editor"
   ],
   "repository": {
     "type": "git",
