@@ -25,16 +25,18 @@
     "angular-editor",
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
-    "ngx-editor"
+    "ngx-editor",
+    "ngx-editor2",
+    "ngx-text-editor"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssuperczynski/ngx-editor2.git"
+    "url": "git+https://github.com/ssuperczynski/ngx-text-editor.git"
   },
   "bugs": {
-    "url": "https://github.com/ssuperczynski/ngx-editor2/issues"
+    "url": "https://github.com/ssuperczynski/ngx-text-editor/issues"
   },
-  "homepage": "https://github.com/ssuperczynski/ngx-editor2",
+  "homepage": "https://github.com/ssuperczynski/ngx-text-editor",
   "peerDependencies": {
     "@angular/common": ">=6.1.0",
     "@angular/core": ">=6.1.0",

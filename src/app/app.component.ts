@@ -8,7 +8,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ngx-editor';
+  title = 'ngx-text-editor';
 
   editorConfig = {
     editable: true,

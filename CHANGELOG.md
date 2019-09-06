@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - HTML headings by [Norddeutschland](https://github.com/Norddeutschland)
 - Language configuration file by [mzsolt1](https://github.com/mzsolt1)
 ### Changed
-- Forked from [ngx-editor](https://github.com/sibiraj-s/ngx-editor) by [jrquick17](https://github.com/jrquick17)
+- Forked from [ngx-editor](https://github.com/jrquick17/ngx-text-editor) by [jrquick17](https://github.com/jrquick17)
 ### Updated
 - Documentation for new pacakge by [jrquick17](https://github.com/jrquick17)
 - FontAwesome documentation by [magicben](https://github.com/magicben)
