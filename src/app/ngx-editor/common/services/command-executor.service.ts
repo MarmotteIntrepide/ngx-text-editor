@@ -35,6 +35,22 @@ export class CommandExecutorService {
       document.execCommand('formatBlock', false, 'div');
     }
 
+    if (command === 'h1')  {
+      document.execCommand('formatBlock', false, 'h1');
+    }
+
+    if (command === 'h2')  {
+      document.execCommand('formatBlock', false, 'h2');
+    }
+
+    if (command === 'h3')  {
+      document.execCommand('formatBlock', false, 'h3');
+    }
+
+    if (command === 'clear')  {
+      document.execCommand('formatBlock', false, 'div');
+    }
+
     document.execCommand(command, false, null);
   }
 
