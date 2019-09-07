@@ -1,47 +1,54 @@
-import {
-  Component, OnInit, Input, Output, ViewChild,
-  EventEmitter, Renderer2, forwardRef
-} from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import {Component, OnInit, Input, Output, ViewChild, EventEmitter, Renderer2, forwardRef} from '@angular/core';
+import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
-import { CommandExecutorService } from './common/services/command-executor.service';
-import { MessageService } from './common/services/message.service';
+import {CommandExecutorService} from './common/services/command-executor.service';
+import {MessageService} from './common/services/message.service';
 
-import { ngxEditorConfig } from './common/ngx-editor.defaults';
+import {ngxEditorConfig} from './common/ngx-editor.defaults';
 import * as Utils from './common/utils/ngx-editor.utils';
 
 @Component({
-  selector: 'app-ngx-editor',
-  templateUrl: './ngx-editor.component.html',
-  styleUrls: ['./ngx-editor.component.scss'],
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NgxEditorComponent),
-    multi: true
+  selector:   'app-ngx-editor',
+  templateUrl:'./ngx-editor.component.html',
+  styleUrls:[
+    './ngx-editor.component.scss'
+  ],
+  providers:[{
+    provide:NG_VALUE_ACCESSOR,
+    useExisting:forwardRef(() => NgxEditorComponent),
+    multi:true
   }]
 })
 
 export class NgxEditorComponent implements OnInit, ControlValueAccessor {
   /** Specifies weather the textarea to be editable or not */
-  @Input() editable: boolean;
+  @Input() editable:boolean;
+
   /** The spellcheck property specifies whether the element is to have its spelling and grammar checked or not. */
-  @Input() spellcheck: boolean;
+  @Input() spellcheck:boolean;
+
   /** Placeholder for the textArea */
-  @Input() placeholder: string;
+  @Input() placeholder:string;
+
   /**
    * The translate property specifies whether the content of an element should be translated or not.
    *
    * Check https://www.w3schools.com/tags/att_global_translate.asp for more information and browser support
    */
-  @Input() translate: string;
+  @Input() translate:string;
+
   /** Sets height of the editor */
-  @Input() height: string;
+  @Input() height:string;
+
   /** Sets minimum height for the editor */
-  @Input() minHeight: string;
+  @Input() minHeight:string;
+
   /** Sets Width of the editor */
-  @Input() width: string;
+  @Input() width:string;
+
   /** Sets minimum width of the editor */
-  @Input() minWidth: string;
+  @Input() minWidth:string;
+
   /**
    * Toolbar accepts an array which specifies the options to be enabled for the toolbar
    *
@@ -49,7 +56,8 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * Passing an empty array will enable all toolbar
    */
-  @Input() toolbar: Object;
+  @Input() toolbar:Object;
+
   /**
    * The editor can be resized vertically.
    *
@@ -58,6 +66,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    * `stack` resizer enable a resizer that looks like as if in https://stackoverflow.com
    */
   @Input() resizer = 'stack';
+
   /**
    * The config property is a JSON object
    *
@@ -65,27 +74,32 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    * inputs provided directly are considered as top priority
    */
   @Input() config = ngxEditorConfig;
+
   /** Weather to show or hide toolbar */
-  @Input() showToolbar: boolean;
+  @Input() showToolbar:boolean;
+
   /** Weather to enable or disable the toolbar */
-  @Input() enableToolbar: boolean;
+  @Input() enableToolbar:boolean;
+
   /** Endpoint for which the image to be uploaded */
-  @Input() imageEndPoint: string;
+  @Input() imageEndPoint:string;
 
   /** emits `blur` event when focused out from the textarea */
-  @Output() blur: EventEmitter<string> = new EventEmitter<string>();
+  @Output() blur:EventEmitter<string> = new EventEmitter<string>();
+
   /** emits `focus` event when focused in to the textarea */
-  @Output() focus: EventEmitter<string> = new EventEmitter<string>();
+  @Output() focus:EventEmitter<string> = new EventEmitter<string>();
+
   /** emits `uploadImage` event when image is selected */
-  @Output() uploadImage: EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
+  @Output() uploadImage:EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
 
   @ViewChild('ngxTextArea') textArea: any;
   @ViewChild('ngxWrapper') ngxWrapper: any;
 
-  Utils: any = Utils;
+  public Utils:any = Utils;
 
-  private onChange: (value: string) => void;
-  private onTouched: () => void;
+  private onChange:(value:string) => void;
+  private onTouched:() => void;
 
   /**
    * @param _messageService service to send message to the editor message component
@@ -93,14 +107,14 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    * @param _renderer access and manipulate the dom element
    */
   constructor(
-    private _messageService: MessageService,
-    private _commandExecutor: CommandExecutorService,
-    private _renderer: Renderer2) { }
+    private _messageService:MessageService,
+    private _commandExecutor:CommandExecutorService,
+    private _renderer:Renderer2) { }
 
   /**
    * events
    */
-  onTextAreaFocus(): void {
+  onTextAreaFocus():void {
     this.focus.emit('focus');
   }
 
@@ -110,17 +124,17 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
   }
 
   /**
-   * Executed from the contenteditable section while the input property changes
-   * @param html html string from contenteditable
+   * Executed from the contentEditable section while the input property changes
+   * @param innerHTML html string from contentEditable
    */
-  onContentChange(innerHTML: string): void {
+  onContentChange(innerHTML:string):void {
     if (typeof this.onChange === 'function') {
       this.onChange(innerHTML);
       this.togglePlaceholder(innerHTML);
     }
   }
 
-  onTextAreaBlur(): void {
+  onTextAreaBlur():void {
     /** save selection if focussed out */
     this._commandExecutor.savedSelection = Utils.saveSelection();
 
@@ -134,7 +148,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    * Executed when the image from the disc is selected
    * @param image uploaded file object
    */
-  onUploadImage(image: HTMLInputElement): void {
+  onUploadImage(image:HTMLInputElement):void {
     this.uploadImage.emit(image);
   }
 
@@ -143,9 +157,10 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param offsetY vertical height of the eidtable portion of the editor
    */
-  resizeTextArea(offsetY: number): void {
+  resizeTextArea(offsetY:number):void {
     let newHeight = parseInt(this.height, 10);
     newHeight += offsetY;
+
     this.height = newHeight + 'px';
     this.textArea.nativeElement.style.height = this.height;
   }
@@ -155,7 +170,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param commandName name of the command to be executed
    */
-  executeCommand(commandName: string): void {
+  executeCommand(commandName:string):void {
     try {
       this._commandExecutor.execute(commandName);
     } catch (error) {
@@ -168,7 +183,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param value value to be executed when there is a change in contenteditable
    */
-  writeValue(value: any): void {
+  writeValue(value:any):void {
     this.togglePlaceholder(value);
 
     if (value === null || value === undefined || value === '' || value === '<br>') {
@@ -184,7 +199,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param fn a function
    */
-  registerOnChange(fn: any): void {
+  registerOnChange(fn:any):void {
     this.onChange = fn;
   }
 
@@ -194,7 +209,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param fn a function
    */
-  registerOnTouched(fn: any): void {
+  registerOnTouched(fn:any):void {
     this.onTouched = fn;
   }
 
@@ -203,8 +218,9 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param value html string from the editor
    */
-  refreshView(value: string): void {
+  refreshView(value:string):void {
     const normalizedValue = value === null ? '' : value;
+
     this._renderer.setProperty(this.textArea.nativeElement, 'innerHTML', normalizedValue);
   }
 
@@ -213,7 +229,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    *
    * @param value A HTML string from the editor
    */
-  togglePlaceholder(value: any): void {
+  togglePlaceholder(value:any):void {
     if (!value || value === '<br>' || value === '') {
       this._renderer.addClass(this.ngxWrapper.nativeElement, 'show-placeholder');
     } else {
@@ -224,26 +240,26 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
   /**
    * returns a json containing input params
    */
-  getCollectiveParams(): any {
+  getCollectiveParams():any {
     return {
-      editable: this.editable,
-      spellcheck: this.spellcheck,
-      placeholder: this.placeholder,
-      translate: this.translate,
-      height: this.height,
-      minHeight: this.minHeight,
-      width: this.width,
-      minWidth: this.minWidth,
-      enableToolbar: this.enableToolbar,
-      showToolbar: this.showToolbar,
-      imageEndPoint: this.imageEndPoint,
-      toolbar: this.toolbar
+      editable:this.editable,
+      spellcheck:this.spellcheck,
+      placeholder:this.placeholder,
+      translate:this.translate,
+      height:this.height,
+      minHeight:this.minHeight,
+      width:this.width,
+      minWidth:this.minWidth,
+      enableToolbar:this.enableToolbar,
+      showToolbar:this.showToolbar,
+      imageEndPoint:this.imageEndPoint,
+      toolbar:this.toolbar
     };
   }
 
   ngOnInit() {
     /**
-     * set configuartion
+     * set configuration
      */
     this.config = this.Utils.getEditorConfiguration(this.config, ngxEditorConfig, this.getCollectiveParams());
 
