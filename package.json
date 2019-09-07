@@ -42,11 +42,11 @@
   "bugs": {
     "url": "https://github.com/jrquick17/ngx-text-editor/issues"
   },
-  "homepage": "https://github.com/ssuperczynski/ngx-text-editor",
+  "homepage": "https://github.com/jrquick17/ngx-text-editor",
   "peerDependencies": {
-    "@angular/common": ">=6.1.0",
-    "@angular/core": ">=6.1.0",
-    "@angular/forms": ">=6.1.0",
+    "@angular/common": ">=2.0.0",
+    "@angular/core": ">=2.0.0",
+    "@angular/forms": ">=2.0.0",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^3.0.1",
     "rxjs": "^6.2.0"
@@ -81,7 +81,7 @@
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
     "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "^2.0.6",
+    "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^4.7.1",
@@ -91,8 +91,8 @@
     "ts-node": "^7.0.0",
     "tsickle": "^0.34.3",
     "tslint": "^5.19.0",
-    "typescript": "^3.2.4",
+    "typescript": "^3.6.2",
     "zone.js": "^0.8.29"
   },
-  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "$schema": "./node_modules/ng-packagr/package.schema.json"
 }
