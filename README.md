@@ -19,13 +19,13 @@ This is an Angular 2+ WYSIWYG component.
 
 ### Installation
 
-Install via Package managers such as [npm][npm] or [yarn][yarn]
+For Angular 2-7: 
 
-```bash
-npm install ngx-text-editor --save
-# or
-yarn add ngx-text-editor
-```
+`npm install ngx-text-editor@^1.0.0 --save`
+
+For Angular 8+:
+
+`npm install ngx-text-editor --save`
 
 ### Documentation
 
@@ -111,10 +111,6 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 
 ## Future Plans
 
-* Create demo directory
-* Add ng-packagr
-* Support for Angular 2-7
-* Release on NPM
 * Support for Angular 8+
 * Release on NPM
 * Update README
