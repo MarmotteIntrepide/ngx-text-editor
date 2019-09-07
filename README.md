@@ -111,6 +111,7 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 
 ## Future Plans
 
+* Add model for editorConfig 
 * Support for Angular 8+
 * Release on NPM
 * Update README

@@ -16,7 +16,7 @@
   "ngPackage": {
     "lib": {
       "cssUrl": "inline",
-      "entryFile": "src/index.ts",
+      "entryFile": "src/public_api.ts",
       "styleIncludePaths": [
         "./src/scss"
       ]
@@ -91,7 +91,7 @@
     "ts-node": "^7.0.0",
     "tsickle": "^0.34.3",
     "tslint": "^5.19.0",
-    "typescript": "^3.6.2",
+    "typescript": "^3.2.4",
     "zone.js": "^0.8.29"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json"
