@@ -37,7 +37,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "node_modules/ionic4-auto-complete/assets/",
+                "input": "node_modules/ngx-text-editor/assets/",
                 "output": "./assets/"
               },
               "src/manifest.json"

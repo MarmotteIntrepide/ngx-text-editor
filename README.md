@@ -51,7 +51,7 @@ For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 
 ## Issues ##
 
-If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ionic4-auto-complete/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
+If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ngx-text-editor/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
 
 ## Demo
 
@@ -111,9 +111,6 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 
 ## Future Plans
 
-* Add model for editorConfig 
-* Support for Angular 8+
-* Release on NPM
-* Update README
-* Update stackblitz
 * Deploy demo website
+* Add model for editorConfig 
+* Update stackblitz
