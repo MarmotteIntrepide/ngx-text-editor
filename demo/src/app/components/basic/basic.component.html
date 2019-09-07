@@ -1,0 +1,11 @@
+<ion-row>
+  <ion-col class="textarea-label">
+    Enter text below...
+  </ion-col>
+  <ion-col [size]="12">
+    <app-ngx-editor [config]="config"
+                    [placeholder]="'Text'"
+                    [spellcheck]="true"
+                    [(ngModel)]="text"></app-ngx-editor>
+  </ion-col>
+</ion-row>

@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0]
 ### Added
+- Create basic demo by [jrquick17](https://github.com/jrquick17)
+
+## [Released]
+
+## [0.0.1]
+### Added
 - CHANGELOG file by [jrquick17](https://github.com/jrquick17)
 - Custom image upload by [khernik93](https://github.com/khernik93)
 - HTML headings by [Norddeutschland](https://github.com/Norddeutschland)
@@ -17,5 +23,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 - Documentation for new pacakge by [jrquick17](https://github.com/jrquick17)
 - FontAwesome documentation by [magicben](https://github.com/magicben)
-
-## [Released]
