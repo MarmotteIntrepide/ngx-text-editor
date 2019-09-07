@@ -1,7 +1,7 @@
 {
   "name": "ngx-text-editor",
-  "version": "1.0.0",
-  "description": "WYSIWYG Editor for Angular 2+ Applications",
+  "version": "2.0.0",
+  "description": "WYSIWYG Editor for Angular 2+",
   "license": "MIT",
   "scripts": {
     "build": "ng-packagr -p package.json && mkdir dist/styles && cp -r src/assets/styles/* dist/styles/",
