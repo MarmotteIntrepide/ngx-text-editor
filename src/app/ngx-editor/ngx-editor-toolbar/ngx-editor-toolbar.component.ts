@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpResponse } from '@angular/common/http';
-import { PopoverConfig } from 'ngx-bootstrap';
-import { CommandExecutorService } from '../common/services/command-executor.service';
-import { MessageService } from '../common/services/message.service';
+import {Component, Input, Output, EventEmitter, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {HttpResponse} from '@angular/common/http';
+import {PopoverConfig} from 'ngx-bootstrap';
+import {CommandExecutorService} from '../common/services/command-executor.service';
+import {MessageService} from '../common/services/message.service';
 import * as Utils from '../common/utils/ngx-editor.utils';
 
 @Component({
@@ -52,12 +52,13 @@ export class NgxEditorToolbarComponent implements OnInit {
   /**
    * Editor configuration
    */
-  @Input() config: any;
-  @ViewChild('urlPopover') urlPopover;
-  @ViewChild('imagePopover') imagePopover;
-  @ViewChild('videoPopover') videoPopover;
-  @ViewChild('fontSizePopover') fontSizePopover;
-  @ViewChild('colorPopover') colorPopover;
+  @Input() config:any;
+  @ViewChild('urlPopover', { static:false }) urlPopover;
+  @ViewChild('imagePopover', { static:false }) imagePopover;
+  @ViewChild('videoPopover', { static:false }) videoPopover;
+  @ViewChild('fontSizePopover', { static:false }) fontSizePopover;
+  @ViewChild('colorPopover', { static:false }) colorPopover;
+
   /**
    * Emits an event when a toolbar button is clicked
    */
