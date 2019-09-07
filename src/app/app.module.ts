@@ -1,12 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { NgxEditorModule } from './ngx-editor/ngx-editor.module';
+import {AppComponent} from './app.component';
+import {NgxEditorModule} from './ngx-editor/ngx-editor.module';
 
 @NgModule({
+  bootstrap: [
+    AppComponent
+  ],
   declarations: [
     AppComponent
   ],
@@ -16,7 +19,6 @@ import { NgxEditorModule } from './ngx-editor/ngx-editor.module';
     NgxEditorModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,19 +1,13 @@
 <div class="container">
   <div class="logo block">
     <img src="assets/icons/ngx-editor.svg" alt="ngx-Editor">
-    <h6>A Simple WYSIWYG Editor for Angular 6 Applications.</h6>
-    <div class="github-buttons">
-      <a class="github-button" href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub">Follow
-        @sibiraj-s</a>
-      <a class="github-button" href="https://github.com/jrquick17/ngx-text-editor/fork" aria-label="Fork jrquick17/ngx-text-editor on GitHub">Fork</a>
-      <a class="github-button" href="https://github.com/jrquick17/ngx-text-editor" aria-label="Star jrquick17/ngx-text-editor on GitHub">Star</a>
-      <a class="github-button" href="https://github.com/jrquick17/ngx-text-editor/issues" data-show-count="true" aria-label="Issue jrquick17/ngx-text-editor on GitHub">Issue</a>
-      <a class="github-button" href="https://github.com/jrquick17/ngx-text-editor/archive/master.zip" aria-label="Download jrquick17/ngx-text-editor on GitHub">Download</a>
-    </div>
+    <h6>A Simple WYSIWYG Editor for Angular 2+</h6>
   </div>
 
   <div class="editor block">
-    <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+    <app-ngx-editor [config]="editorConfig"
+                    [spellcheck]="true"
+                    [(ngModel)]="htmlContent"></app-ngx-editor>
   </div>
 
   <div *ngIf="htmlContent" class="htmlblock block">

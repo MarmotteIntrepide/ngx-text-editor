@@ -1,22 +1,25 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector:    'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: [
+    './app.component.scss'
+  ],
   encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent {
   title = 'ngx-text-editor';
 
+  // TODO: Add model
   editorConfig = {
-    editable: true,
-    spellcheck: false,
-    height: '10rem',
-    minHeight: '5rem',
+    editable:    true,
+    spellcheck:  false,
+    height:      '10rem',
+    minHeight:   '5rem',
     placeholder: 'Type something. Test the Editor... ヽ(^。^)丿',
-    translate: 'no'
+    translate:   'no'
   };
 
   htmlContent = '';
