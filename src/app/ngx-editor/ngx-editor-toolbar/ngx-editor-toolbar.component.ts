@@ -7,33 +7,43 @@ import { MessageService } from '../common/services/message.service';
 import * as Utils from '../common/utils/ngx-editor.utils';
 
 @Component({
-  selector: 'app-ngx-editor-toolbar',
-  templateUrl: './ngx-editor-toolbar.component.html',
-  styleUrls: ['./ngx-editor-toolbar.component.scss'],
-  providers: [PopoverConfig]
+  selector:'app-ngx-editor-toolbar',
+  templateUrl:'./ngx-editor-toolbar.component.html',
+  styleUrls:['./ngx-editor-toolbar.component.scss'],
+  providers:[PopoverConfig]
 })
 
 export class NgxEditorToolbarComponent implements OnInit {
   /** holds values of the insert link form */
-  urlForm: FormGroup;
+  urlForm:FormGroup;
+
   /** holds values of the insert image form */
-  imageForm: FormGroup;
+  imageForm:FormGroup;
+
   /** holds values of the insert video form */
-  videoForm: FormGroup;
+  videoForm:FormGroup;
+
   /** set to false when image is being uploaded */
   uploadComplete = true;
+
   /** upload percentage */
   updloadPercentage = 0;
+
   /** set to true when the image is being uploaded */
   isUploading = false;
-  /** which tab to active for color insetion */
+
+  /** which tab to active for color insertion */
   selectedColorTab = 'textColor';
+
   /** font family name */
   fontName = '';
+
   /** font size */
   fontSize = '';
+
   /** hex color code */
   hexColor = '';
+
   /** show/hide image uploader */
   isImageUploader = false;
 
@@ -51,16 +61,17 @@ export class NgxEditorToolbarComponent implements OnInit {
   /**
    * Emits an event when a toolbar button is clicked
    */
-  @Output() execute: EventEmitter<string> = new EventEmitter<string>();
+  @Output() execute:EventEmitter<string> = new EventEmitter<string>();
+
   /**
    * Emits an event then an image is selected
    */
-  @Output() uploadImage: EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
+  @Output() uploadImage:EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
 
-  constructor(private _popOverConfig: PopoverConfig,
-    private _formBuilder: FormBuilder,
-    private _messageService: MessageService,
-    private _commandExecutorService: CommandExecutorService) {
+  constructor(private _popOverConfig:PopoverConfig,
+    private _formBuilder:FormBuilder,
+    private _messageService:MessageService,
+    private _commandExecutorService:CommandExecutorService) {
     this._popOverConfig.outsideClick = true;
     this._popOverConfig.placement = 'bottom';
     this._popOverConfig.container = 'body';
@@ -71,7 +82,7 @@ export class NgxEditorToolbarComponent implements OnInit {
    *
    * @param value name of the toolbar buttons
    */
-  canEnableToolbarOptions(value): boolean {
+  canEnableToolbarOptions(value):boolean {
     return Utils.canEnableToolbarOptions(value, this.config['toolbar']);
   }
 
@@ -80,25 +91,25 @@ export class NgxEditorToolbarComponent implements OnInit {
    *
    * @param command name of the command to be executed
    */
-  triggerCommand(command: string): void {
+  triggerCommand(command:string):void {
     this.execute.emit(command);
   }
 
   /**
    * create URL insert form
    */
-  buildUrlForm(): void {
+  buildUrlForm():void {
     this.urlForm = this._formBuilder.group({
-      urlLink: ['', [Validators.required]],
-      urlText: ['', [Validators.required]],
-      urlNewTab: [true]
+      urlLink:['', [Validators.required]],
+      urlText:['', [Validators.required]],
+      urlNewTab:[true]
     });
   }
 
   /**
    * inserts link in the editor
    */
-  insertLink(): void {
+  insertLink():void {
     try {
       this._commandExecutorService.createLink(this.urlForm.value);
     } catch (error) {
@@ -114,20 +125,20 @@ export class NgxEditorToolbarComponent implements OnInit {
   /**
    * create insert image form
    */
-  buildImageForm(): void {
+  buildImageForm():void {
     this.imageForm = this._formBuilder.group({
-      imageUrl: ['', [Validators.required]]
+      imageUrl:['', [Validators.required]]
     });
   }
 
   /**
    * create insert image form
    */
-  buildVideoForm(): void {
+  buildVideoForm():void {
     this.videoForm = this._formBuilder.group({
-      videoUrl: ['', [Validators.required]],
-      height: [''],
-      width: ['']
+      videoUrl:['', [Validators.required]],
+      height:[''],
+      width:['']
     });
   }
 
@@ -136,7 +147,7 @@ export class NgxEditorToolbarComponent implements OnInit {
    *
    * @param e onChange event
    */
-  onFileChange(e): void {
+  onFileChange(e):void {
     this.uploadComplete = false;
     this.isUploading = true;
 
@@ -174,7 +185,7 @@ export class NgxEditorToolbarComponent implements OnInit {
   }
 
   /** insert image in the editor */
-  insertImage(): void {
+  insertImage():void {
     try {
       this._commandExecutorService.insertImage(this.imageForm.value.imageUrl);
     } catch (error) {
@@ -188,7 +199,7 @@ export class NgxEditorToolbarComponent implements OnInit {
   }
 
   /** insert image in the editor */
-  insertVideo(): void {
+  insertVideo():void {
     try {
       this._commandExecutorService.insertVideo(this.videoForm.value);
     } catch (error) {
@@ -202,7 +213,7 @@ export class NgxEditorToolbarComponent implements OnInit {
   }
 
   /** inser text/background color */
-  insertColor(color: string, where: string): void {
+  insertColor(color:string, where:string):void {
     try {
       this._commandExecutorService.insertColor(color, where);
     } catch (error) {
@@ -213,7 +224,7 @@ export class NgxEditorToolbarComponent implements OnInit {
   }
 
   /** set font size */
-  setFontSize(fontSize: string): void {
+  setFontSize(fontSize:string):void {
     try {
       this._commandExecutorService.setFontSize(fontSize);
     } catch (error) {
@@ -224,7 +235,7 @@ export class NgxEditorToolbarComponent implements OnInit {
   }
 
   /** set font Name/family */
-  setFontName(fontName: string): void {
+  setFontName(fontName:string):void {
     try {
       this._commandExecutorService.setFontName(fontName);
     } catch (error) {
@@ -234,18 +245,19 @@ export class NgxEditorToolbarComponent implements OnInit {
     this.fontSizePopover.hide();
   }
 
-  ngOnInit() {
+  ngOnInit():void {
     this.buildUrlForm();
     this.buildImageForm();
     this.buildVideoForm();
   }
 
-  toggleHeading(heading: string) {
+  toggleHeading(heading:string):void {
     if (!this.wasH1Pressed) {
       this.execute.emit(heading);
     } else {
       this.execute.emit('clear');
     }
+
     this.wasH1Pressed = !this.wasH1Pressed;
   }
 }
