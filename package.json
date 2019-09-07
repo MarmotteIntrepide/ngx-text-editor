@@ -1,27 +1,37 @@
 {
   "name": "ngx-text-editor",
-  "version": "1.0.0",
-  "description": "WYSIWYG Editor for Angular Applications",
+  "version": "0.0.1",
+  "description": "WYSIWYG Editor for Angular 2+ Applications",
   "license": "MIT",
   "scripts": {
-    "build": "ng build --prod",
-    "build:package": "sh ./scripts/build.sh",
-    "docs": "compodoc && npm run publish:docs",
-    "e2e": "ng e2e",
-    "lint": "ng lint",
-    "ng": "ng",
-    "postbuild": "npm run build:package",
-    "prebuild": "npm run lint",
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run build",
-    "publish:docs": "node ./scripts/publishdocs.js",
-    "release": "sh ./scripts/release.sh",
-    "start": "ng serve",
-    "serve:docs": "compodoc --serve --open --output=\"docs/\"",
-    "test": "ng test",
-    "test:single-run": "ng test --watch false"
+    "build": "ng-packagr -p package.json && mkdir dist/styles && cp -r src/assets/styles/* dist/styles/",
+    "docs": "npm run docs:build",
+    "docs:build": "compodoc -p tsconfig.json -n ionic4-auto-complete -d docs --hideGenerator",
+    "docs:serve": "npm run docs:build -- -s",
+    "docs:watch": "npm run docs:build -- -s -w",
+    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "publish": "npm publish dist",
+    "test": "tsc && karma start"
+  },
+  "ngPackage": {
+    "lib": {
+      "cssUrl": "inline",
+      "entryFile": "src/index.ts",
+      "styleIncludePaths": [
+        "./src/scss"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrquick17/ngx-text-editor.git"
+  },
+  "author": {
+    "name": "Jeremy Quick",
+    "email": "me@jrquick.com"
   },
   "keywords": [
+    "angular",
     "angular-editor",
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
@@ -29,12 +39,8 @@
     "ngx-editor2",
     "ngx-text-editor"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssuperczynski/ngx-text-editor.git"
-  },
   "bugs": {
-    "url": "https://github.com/ssuperczynski/ngx-text-editor/issues"
+    "url": "https://github.com/jrquick17/ngx-text-editor/issues"
   },
   "homepage": "https://github.com/ssuperczynski/ngx-text-editor",
   "peerDependencies": {
@@ -46,7 +52,7 @@
     "rxjs": "^6.2.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.3",
+    "@angular-devkit/build-angular": "^0.13.9",
     "@angular/animations": "^7.2.15",
     "@angular/cli": "^7.3.9",
     "@angular/common": "^7.2.15",
@@ -85,7 +91,8 @@
     "ts-node": "^7.0.0",
     "tsickle": "^0.34.3",
     "tslint": "^5.19.0",
-    "typescript": "^3.6.2",
+    "typescript": "^3.2.4",
     "zone.js": "^0.8.29"
-  }
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
 }
