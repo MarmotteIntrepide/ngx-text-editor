@@ -6,11 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0]
+### Added
+- Update for Angular 8+ by [jrquick17](https://github.com/jrquick17)
+
+## [Released]
+
 ## [1.0.0]
 ### Added
 - Create basic demo by [jrquick17](https://github.com/jrquick17)
-
-## [Released]
 
 ## [0.0.1]
 ### Added
