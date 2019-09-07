@@ -1,27 +1,21 @@
 # NgxTextEditor
 
-<p align="center">
-  <a href="https://github.com/jrquick17/ngx-text-editor">
-   <img src="https://raw.githubusercontent.com/jrquick17/ngx-text-editor/master/src/assets/icons/ngx-text-editor.png" alt="ngxEditor">
-  </a>
-</p>
-<p align="center">A Simple WYSIWYG Editor for Angular 2+ Applications.</p>
-<p align="center">
-  <a href="https://travis-ci.org/jrquick17/ngx-text-editor">
-    <img alt="Build Status" src="https://travis-ci.org/jrquick17/ngx-text-editor.svg?branch=master">
-  </a>
-  <a href="https://www.npmjs.com/package/ngx-text-editor">
-    <img alt="npm version" src="https://img.shields.io/npm/v/ngx-text-editor.svg">
-  </a>
-  <a href="https://www.npmjs.com/package/ngx-text-editor">
-    <img alt="npm" src="https://img.shields.io/npm/dm/ngx-text-editor.svg">
-  </a>
-  <a href="https://github.com/jrquick17/ngx-text-editor/blob/master/LICENSE">
-    <img alt="licence" src="https://img.shields.io/npm/l/ngx-text-editor.svg">
-  </a>
-</p>
+## Index ##
 
-## Getting Started
+* [About](#about)
+* [Setup](#setup)
+* [Documentation](#documentation)
+* [Issues](#issues)
+* [Contributing](#contributing)
+* [Deploy](#deploy)
+* [Future Plans](#future-plans)
+* [FAQ](#faq)
+
+## About ## 
+
+This is an Angular 2+ WYSIWYG component.  
+
+## Setup
 
 ### Installation
 
@@ -33,7 +27,7 @@ npm install ngx-text-editor --save
 yarn add ngx-text-editor
 ```
 
-### Usage
+### Documentation
 
 Import `ngx-text-editor` module
 
@@ -55,21 +49,9 @@ Then in HTML
 
 For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 
-#### PeerDependencies
+## Issues ##
 
-`ngx-text-editor` depends on the following libraries to work.
-
-* [Font-Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/fa-4)
-* [Ngx-Bootstrap](https://github.com/valor-software/ngx-bootstrap)
-
-## Compatibility
-
-All Evergreen-Browsers are supported
-
-* Google Chrome
-* Microsoft Edge
-* Mozilla Firefox
-* Opera
+If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ionic4-auto-complete/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
 
 ## Demo
 
@@ -85,7 +67,7 @@ Documentation is auto-generated using [compodoc][compodoc], and can be viewed he
 [wiki]:https://github.com/jrquick17/ngx-text-editor/wiki/ngxTextEditor
 [compodoc]: https://compodoc.github.io/website/
 
-## Contributors
+## Contributing
 
 A special thanks to all of our contributors! To contribute yourself just submit a [pull request](https://github.com/jrquick17/ngx-text-editor/pulls)!
 
@@ -97,7 +79,37 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 * [sibiraj-s](https://github.com/sibiraj-s)
 * [ssuperczynski](https://github.com/)
 
-## To Do
+## Deploy ##
+
+* ### Generate Docs ###
+
+   * Run `npm run docs:build`
+   
+* #### Update Version ###
+
+   * Update version `package.json` files in both the root and `dist/` directory following [Semantic Versioning (2.0.0)](https://semver.org/).
+
+* ### Build ###
+
+    * Run `npm run build` from root.
+
+* #### Test ###
+
+    * Update `dist/package.json` to have `dependencies` to match root `package.json`.
+    * Copy `dist/` contents into `demo/node_modules/ngx-text-editor/`
+        * Run from root:  `cp -fr dist/* demo/node_modules/ngx-text-editor/`
+    * Run `ionic serve` from `demo/`
+    * Run `ionic build --prod` from `demo/`
+
+* #### NPM Release ####
+
+    * Run `npm publish` from `dist/` directory.
+
+* #### Update Changelog ####
+
+    * Add updates to `CHANGELOG.md` in root.
+
+## Future Plans
 
 * Create demo directory
 * Add ng-packagr
