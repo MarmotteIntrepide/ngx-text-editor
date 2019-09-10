@@ -38,7 +38,7 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^4.6.3",
     "ngx-bootstrap": "^5.1.1",
-    "ngx-text-editor": "^2.0.0",
+    "ngx-text-editor": "^2.1.0",
     "path": "^0.12.7",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
