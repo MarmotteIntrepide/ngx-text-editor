@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.0.1",
   "author": "Jeremy Quick<me@jrquick.com>",
-  "homepage": "https://jrquick.com/",
+  "homepage": "https://ngx-text-editor.jrquick.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
