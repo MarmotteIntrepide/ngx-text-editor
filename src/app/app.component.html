@@ -6,9 +6,9 @@
   </div>
 
   <div class="editor block">
-    <app-ngx-text-editor [config]="editorConfig"
-                         [spellcheck]="true"
-                         [(ngModel)]="htmlContent"></app-ngx-text-editor>
+    <ngx-text-editor [config]="editorConfig"
+                     [spellcheck]="true"
+                     [(ngModel)]="htmlContent"></ngx-text-editor>
   </div>
 
   <div *ngIf="htmlContent" class="htmlblock block">

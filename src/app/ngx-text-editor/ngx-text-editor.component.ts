@@ -8,7 +8,7 @@ import {ngxTextEditorConfig} from './common/ngx-text-editor.defaults';
 import * as Utils from './common/utils/ngx-text-editor.utils';
 
 @Component({
-  selector:    'app-ngx-text-editor',
+  selector:    'ngx-text-editor',
   templateUrl: './ngx-text-editor.component.html',
   styleUrls:[
     './ngx-text-editor.component.scss'

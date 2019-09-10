@@ -7,7 +7,7 @@ import {MessageService} from '../common/services/message.service';
 import * as Utils from '../common/utils/ngx-text-editor.utils';
 
 @Component({
-  selector:    'app-ngx-text-editor-toolbar',
+  selector:    'ngx-text-editor-toolbar',
   templateUrl: './ngx-text-editor-toolbar.component.html',
   styleUrls: [
     './ngx-text-editor-toolbar.component.scss'
