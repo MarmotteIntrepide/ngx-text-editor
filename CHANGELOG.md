@@ -6,11 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1]
+
+## [Released]
+
 ## [2.1.0]
 ### Changed
 - Renamed files, components, modules, etc for consistency by [jrquick17](https://github.com/jrquick17)
-
-## [Released]
 
 ## [2.0.0]
 ### Added
