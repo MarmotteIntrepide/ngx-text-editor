@@ -87,7 +87,7 @@ A special thanks to all of our contributors! To contribute yourself just submit 
    
 * #### Update Version ###
 
-   * Update version `package.json` files in both the root and `dist/` directory following [Semantic Versioning (2.0.0)](https://semver.org/).
+   * Update version `package.json` file in the root directory following [Semantic Versioning (2.0.0)](https://semver.org/).
 
 * ### Build ###
 
