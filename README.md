@@ -95,7 +95,6 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 
 * #### Test ###
 
-    * Update `dist/package.json` to have `dependencies` to match root `package.json`.
     * Copy `dist/` contents into `demo/node_modules/ngx-text-editor/`
         * Run from root:  `cp -fr dist/* demo/node_modules/ngx-text-editor/`
     * Run `ionic serve` from `demo/`
