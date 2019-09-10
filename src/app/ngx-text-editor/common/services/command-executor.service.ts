@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpRequest} from '@angular/common/http';
 import * as Utils from '../utils/ngx-text-editor.utils';
 
 @Injectable()
 export class CommandExecutorService {
-  /** saves the selection from the editor when focussed out */
+  /** saves the selection from the editor when focused out */
   savedSelection: any = undefined;
 
   /**

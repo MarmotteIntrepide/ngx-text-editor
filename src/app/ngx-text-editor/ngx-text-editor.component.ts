@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, ViewChild, EventEmitter, Renderer2, forwardRef} from '@angular/core';
+import {Component, OnInit, Input, Output, ViewChild, EventEmitter, Renderer2, forwardRef, ElementRef} from '@angular/core';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
 import {CommandExecutorService} from './common/services/command-executor.service';
