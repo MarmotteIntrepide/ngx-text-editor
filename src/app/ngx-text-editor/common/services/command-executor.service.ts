@@ -64,7 +64,12 @@ export class CommandExecutorService {
       if (imageURI) {
         const restored = Utils.restoreSelection(this.savedSelection);
         if (restored) {
-          const inserted = document.execCommand('insertImage', false, imageURI);
+          const img = document.createElement('img');
+          img.src = imageURI;
+          img.style.width = 'auto';
+
+          const inserted = this.insertHtml(img.outerHTML);
+
           if (!inserted) {
             throw new Error('Invalid URL');
           }
@@ -264,12 +269,14 @@ export class CommandExecutorService {
   }
 
   /** insert HTML */
-  private insertHtml(html: string): void {
+  private insertHtml(html: string):boolean {
     const isHTMLInserted = document.execCommand('insertHTML', false, html);
 
     if (!isHTMLInserted) {
       throw new Error('Unable to perform the operation');
     }
+
+    return isHTMLInserted;
   }
 
   /**
