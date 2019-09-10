@@ -5,7 +5,7 @@ import {IonicModule} from '@ionic/angular';
 
 import {BasicComponent} from './basic.component';
 
-import {NgxEditorModule} from 'ngx-text-editor';
+import {NgxTextEditorModule} from 'ngx-text-editor';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {NgxEditorModule} from 'ngx-text-editor';
     CommonModule,
     FormsModule,
     IonicModule,
-    NgxEditorModule
+    NgxTextEditorModule
   ]
 })
 export class BasicModule {}

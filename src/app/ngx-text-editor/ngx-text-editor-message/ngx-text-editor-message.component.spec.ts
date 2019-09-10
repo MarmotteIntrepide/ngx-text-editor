@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxTextEditorMessageComponent } from './ngx-text-editor-message.component';
 import { MessageService } from '../common/services/message.service';
 
-describe('NgxEditorMessageComponent', () => {
+describe('NgxTextEditorMessageComponent', () => {
   let component: NgxTextEditorMessageComponent;
   let fixture: ComponentFixture<NgxTextEditorMessageComponent>;
 

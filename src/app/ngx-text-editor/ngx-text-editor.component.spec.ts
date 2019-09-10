@@ -9,7 +9,7 @@ import { PopoverModule } from 'ngx-bootstrap';
 import { MessageService } from './common/services/message.service';
 import { CommandExecutorService } from './common/services/command-executor.service';
 
-describe('NgxEditorComponent', () => {
+describe('NgxTextEditorComponent', () => {
   let component: NgxTextEditorComponent;
   let fixture: ComponentFixture<NgxTextEditorComponent>;
 

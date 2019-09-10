@@ -28,7 +28,7 @@ export function MaxLengthValidator(maxlength:number, options?:IMaxLengthValidato
 
     if (innerText.length > maxlength) {
       return {
-        ngxEditor: {
+        ngxTextEditor: {
           allowedLength: maxlength,
           textLength: innerText.length
         }

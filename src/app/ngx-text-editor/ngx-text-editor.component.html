@@ -1,4 +1,4 @@
-<div class="ngx-text-editor" id="ngxEditor" [style.width]="config['width']" [style.minWidth]="config['minWidth']" tabindex="0"
+<div class="ngx-text-editor" id="ngxTextEditor" [style.width]="config['width']" [style.minWidth]="config['minWidth']" tabindex="0"
      (focus)="onEditorFocus()">
 
   <app-ngx-text-editor-toolbar [config]="config" (execute)="executeCommand($event)" (uploadImage)="onUploadImage($event)"></app-ngx-text-editor-toolbar>

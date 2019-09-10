@@ -1,7 +1,7 @@
 /**
  * toolbar default configuration
  */
-export const ngxEditorConfig = {
+export const ngxTextEditorConfig = {
   editable: true,
   spellcheck: true,
   height: 'auto',

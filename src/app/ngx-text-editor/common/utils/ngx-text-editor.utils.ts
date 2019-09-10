@@ -24,17 +24,17 @@ export function canEnableToolbarOptions(value: string, toolbar: any): boolean {
  * set editor configuration
  *
  * @param value configuration via [config] propertyify
- * @param ngxEditorConfig default editor configuration
+ * @param ngxTextEditorConfig default editor configuration
  * @param input direct configuration inputs via directives
  */
-export function getEditorConfiguration(value: any, ngxEditorConfig: any, input: any): any {
-  for (const i in ngxEditorConfig) {
+export function getEditorConfiguration(value: any, ngxTextEditorConfig: any, input: any): any {
+  for (const i in ngxTextEditorConfig) {
     if (i) {
       if (input[i] !== undefined) {
         value[i] = input[i];
       }
       if (!value.hasOwnProperty(i)) {
-        value[i] = ngxEditorConfig[i];
+        value[i] = ngxTextEditorConfig[i];
       }
     }
   }

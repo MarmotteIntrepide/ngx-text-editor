@@ -4,7 +4,7 @@ import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 import {CommandExecutorService} from './common/services/command-executor.service';
 import {MessageService} from './common/services/message.service';
 
-import {ngxEditorConfig} from './common/ngx-text-editor.defaults';
+import {ngxTextEditorConfig} from './common/ngx-text-editor.defaults';
 import * as Utils from './common/utils/ngx-text-editor.utils';
 
 @Component({
@@ -51,7 +51,7 @@ export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
   /**
    * Toolbar accepts an array which specifies the options to be enabled for the toolbar
    *
-   * Check ngxEditorConfig for toolbar configuration
+   * Check ngxTextEditorConfig for toolbar configuration
    *
    * Passing an empty array will enable all toolbar
    */
@@ -72,7 +72,7 @@ export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
    * All avaibale inputs inputs can be provided in the configuration as JSON
    * inputs provided directly are considered as top priority
    */
-  @Input() config = ngxEditorConfig;
+  @Input() config = ngxTextEditorConfig;
 
   /** Weather to show or hide toolbar */
   @Input() showToolbar:boolean;
@@ -260,7 +260,7 @@ export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
     /**
      * set configuration
      */
-    this.config = this.Utils.getEditorConfiguration(this.config, ngxEditorConfig, this.getCollectiveParams());
+    this.config = this.Utils.getEditorConfiguration(this.config, ngxTextEditorConfig, this.getCollectiveParams());
 
     this.height = this.height || this.textArea.nativeElement.offsetHeight;
 
