@@ -13,7 +13,7 @@ export function canEnableToolbarOptions(value: string, toolbar: any): boolean {
         return array.indexOf(value) !== -1;
       });
 
-      return found.length ? true : false;
+      return !!found.length;
     }
   } else {
     return false;
@@ -23,7 +23,7 @@ export function canEnableToolbarOptions(value: string, toolbar: any): boolean {
 /**
  * set editor configuration
  *
- * @param value configuration via [config] property
+ * @param value configuration via [config] propertyify
  * @param ngxEditorConfig default editor configuration
  * @param input direct configuration inputs via directives
  */
