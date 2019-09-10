@@ -8,15 +8,15 @@ import {ngxTextEditorConfig} from './common/ngx-text-editor.defaults';
 import * as Utils from './common/utils/ngx-text-editor.utils';
 
 @Component({
-  selector:   'app-ngx-text-editor',
-  templateUrl:'./ngx-text-editor.component.html',
+  selector:    'app-ngx-text-editor',
+  templateUrl: './ngx-text-editor.component.html',
   styleUrls:[
     './ngx-text-editor.component.scss'
   ],
   providers:[{
-    provide:NG_VALUE_ACCESSOR,
-    useExisting:forwardRef(() => NgxTextEditorComponent),
-    multi:true
+    provide:     NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => NgxTextEditorComponent),
+    multi:       true
   }]
 })
 export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
@@ -92,8 +92,8 @@ export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
   /** emits `uploadImage` event when image is selected */
   @Output() uploadImage:EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
 
-  @ViewChild('ngxTextArea', { static:false }) textArea:any;
-  @ViewChild('ngxWrapper', { static:false }) ngxWrapper:any;
+  @ViewChild('ngxTextArea', { static: false }) textArea:any;
+  @ViewChild('ngxWrapper', { static: false }) ngxWrapper:any;
 
   public Utils:any = Utils;
 
