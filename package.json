@@ -9,7 +9,7 @@
     "docs:build": "compodoc -p tsconfig.json -n ngx-text-editor -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
-    "lint": "tslint --project tsconfig.json src/**/*.ts",
+    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "publish": "npm publish dist",
     "test": "tsc && karma start"
   },
@@ -44,15 +44,12 @@
   },
   "homepage": "https://github.com/jrquick17/ngx-text-editor",
   "peerDependencies": {
-    "@angular/common": ">=8.0.0",
-    "@angular/core": ">=8.0.0",
-    "@angular/forms": ">=8.0.0",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.1.1",
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.3",
+    "@angular-devkit/build-angular": "~0.803.3",
     "@angular/animations": "^8.2.5",
     "@angular/cli": "^8.3.3",
     "@angular/common": "^8.2.5",
@@ -70,7 +67,7 @@
     "@types/node": "^12.7.4",
     "bootstrap": "^4.3.1",
     "chalk": "^2.4.2",
-    "codelyzer": "^5.1.0",
+    "codelyzer": "^5.0.1",
     "core-js": "^3.2.1",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.1.1",
@@ -84,7 +81,7 @@
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "ng-packagr": "^5.5.0",
+    "ng-packagr": "^5.4.0",
     "ngx-bootstrap": "^5.1.1",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
@@ -93,8 +90,8 @@
     "ts-node": "^8.3.0",
     "tsickle": "^0.37.0",
     "tslint": "^5.20.0",
-    "typescript": "^3.5.3",
-    "zone.js": "^0.9.1"
+    "typescript": "~3.5.3",
+    "zone.js": "~0.9.1"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json"
 }

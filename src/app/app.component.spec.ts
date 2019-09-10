@@ -2,14 +2,14 @@ import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgxTextEditorModule } from './ngx-text-editor/ngx-text-editor.module';
+import { NgxEditorModule } from './ngx-editor/ngx-editor.module';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, HttpClientModule, NgxTextEditorModule],
+      imports: [FormsModule, HttpClientModule, NgxEditorModule],
       declarations: [
         AppComponent
       ],
@@ -25,7 +25,7 @@ describe('AppComponent', () => {
   it(`should have as title 'app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ngx-text-editor');
+    expect(app.title).toEqual('ngx-editor');
 
   });
 
