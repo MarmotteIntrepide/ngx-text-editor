@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.1.0]
 ### Changed
-- Renamed files, components, and modules for consistency by [jrquick17](https://github.com/jrquick17)
+- Renamed files, components, modules, etc for consistency by [jrquick17](https://github.com/jrquick17)
 
 ## [Released]
 
