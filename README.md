@@ -111,6 +111,6 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 
 ## Future Plans
 
-* Deploy demo website
 * Add model for editorConfig 
 * Update stackblitz
+* Update color picker
