@@ -4,23 +4,22 @@ import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 import {CommandExecutorService} from './common/services/command-executor.service';
 import {MessageService} from './common/services/message.service';
 
-import {ngxEditorConfig} from './common/ngx-editor.defaults';
-import * as Utils from './common/utils/ngx-editor.utils';
+import {ngxEditorConfig} from './common/ngx-text-editor.defaults';
+import * as Utils from './common/utils/ngx-text-editor.utils';
 
 @Component({
-  selector:   'app-ngx-editor',
-  templateUrl:'./ngx-editor.component.html',
+  selector:   'app-ngx-text-editor',
+  templateUrl:'./ngx-text-editor.component.html',
   styleUrls:[
-    './ngx-editor.component.scss'
+    './ngx-text-editor.component.scss'
   ],
   providers:[{
     provide:NG_VALUE_ACCESSOR,
-    useExisting:forwardRef(() => NgxEditorComponent),
+    useExisting:forwardRef(() => NgxTextEditorComponent),
     multi:true
   }]
 })
-
-export class NgxEditorComponent implements OnInit, ControlValueAccessor {
+export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
   /** Specifies weather the textarea to be editable or not */
   @Input() editable:boolean;
 

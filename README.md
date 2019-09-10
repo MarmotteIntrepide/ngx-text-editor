@@ -32,10 +32,10 @@ For Angular 8+:
 Import `ngx-text-editor` module
 
 ```typescript
-import { NgxEditorModule } from 'ngx-text-editor';
+import { NgxTextEditorModule } from 'ngx-text-editor';
 
 @NgModule({
-  imports: [ NgxEditorModule ]
+  imports: [ NgxTextEditorModule ]
 })
 ```
 

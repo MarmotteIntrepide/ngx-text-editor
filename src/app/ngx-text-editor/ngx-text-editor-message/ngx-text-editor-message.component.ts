@@ -3,12 +3,14 @@ import { Component } from '@angular/core';
 import { MessageService } from '../common/services/message.service';
 
 @Component({
-  selector: 'app-ngx-editor-message',
-  templateUrl: './ngx-editor-message.component.html',
-  styleUrls: ['./ngx-editor-message.component.scss']
+  selector:    'app-ngx-text-editor-message',
+  templateUrl: './ngx-text-editor-message.component.html',
+  styleUrls: [
+    './ngx-text-editor-message.component.scss'
+  ]
 })
 
-export class NgxEditorMessageComponent {
+export class NgxTextEditorMessageComponent {
   /** property that holds the message to be displayed on the editor */
   ngxMessage = undefined;
 

@@ -1,13 +1,14 @@
 <div class="container">
   <div class="logo block">
-    <img src="assets/icons/ngx-editor.svg" alt="ngx-Editor">
+    <img src="assets/icons/ngx-text-editor.svg"
+         alt="ngx-text-editor"/>
     <h6>A Simple WYSIWYG Editor for Angular 2+</h6>
   </div>
 
   <div class="editor block">
-    <app-ngx-editor [config]="editorConfig"
-                    [spellcheck]="true"
-                    [(ngModel)]="htmlContent"></app-ngx-editor>
+    <app-ngx-text-editor [config]="editorConfig"
+                         [spellcheck]="true"
+                         [(ngModel)]="htmlContent"></app-ngx-text-editor>
   </div>
 
   <div *ngIf="htmlContent" class="htmlblock block">

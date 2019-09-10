@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxEditorMessageComponent } from './ngx-editor-message.component';
+import { NgxTextEditorMessageComponent } from './ngx-text-editor-message.component';
 import { MessageService } from '../common/services/message.service';
 
 describe('NgxEditorMessageComponent', () => {
-  let component: NgxEditorMessageComponent;
-  let fixture: ComponentFixture<NgxEditorMessageComponent>;
+  let component: NgxTextEditorMessageComponent;
+  let fixture: ComponentFixture<NgxTextEditorMessageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       providers: [MessageService],
-      declarations: [NgxEditorMessageComponent]
+      declarations: [NgxTextEditorMessageComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxEditorMessageComponent);
+    fixture = TestBed.createComponent(NgxTextEditorMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

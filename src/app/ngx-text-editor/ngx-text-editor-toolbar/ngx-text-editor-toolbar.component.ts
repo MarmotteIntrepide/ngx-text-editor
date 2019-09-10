@@ -4,16 +4,18 @@ import {HttpResponse} from '@angular/common/http';
 import {PopoverConfig} from 'ngx-bootstrap';
 import {CommandExecutorService} from '../common/services/command-executor.service';
 import {MessageService} from '../common/services/message.service';
-import * as Utils from '../common/utils/ngx-editor.utils';
+import * as Utils from '../common/utils/ngx-text-editor.utils';
 
 @Component({
-  selector:'app-ngx-editor-toolbar',
-  templateUrl:'./ngx-editor-toolbar.component.html',
-  styleUrls:['./ngx-editor-toolbar.component.scss'],
+  selector:    'app-ngx-text-editor-toolbar',
+  templateUrl: './ngx-text-editor-toolbar.component.html',
+  styleUrls: [
+    './ngx-text-editor-toolbar.component.scss'
+  ],
   providers:[PopoverConfig]
 })
 
-export class NgxEditorToolbarComponent implements OnInit {
+export class NgxTextEditorToolbarComponent implements OnInit {
   /** holds values of the insert link form */
   urlForm:FormGroup;
 

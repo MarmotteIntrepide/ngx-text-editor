@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest } from '@angular/common/http';
-import * as Utils from '../utils/ngx-editor.utils';
+import * as Utils from '../utils/ngx-text-editor.utils';
 
 @Injectable()
 export class CommandExecutorService {

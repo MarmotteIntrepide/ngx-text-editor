@@ -1,4 +1,4 @@
-import { AbstractControl } from '@angular/forms';
+import {AbstractControl} from '@angular/forms';
 
 interface IMaxLengthValidatorOptions {
   excludeLineBreaks?: boolean;
@@ -6,7 +6,7 @@ interface IMaxLengthValidatorOptions {
   excludeWhiteSpaces?: boolean;
 }
 
-export function MaxLengthValidator(maxlength: number, options?: IMaxLengthValidatorOptions) {
+export function MaxLengthValidator(maxlength:number, options?:IMaxLengthValidatorOptions) {
   return (control: AbstractControl): { [key: string]: any } | null => {
     const parsedDocument = new DOMParser().parseFromString(control.value, 'text/html');
     let innerText = parsedDocument.body.innerText || '';

@@ -1,2 +1,2 @@
-export * from './app/ngx-editor/ngx-editor.module';
-export * from './app/ngx-editor/validators/maxlength-validator';
+export * from './app/ngx-text-editor/ngx-text-editor.module';
+export * from './app/ngx-text-editor/validators/maxlength-validator';
