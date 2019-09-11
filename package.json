@@ -1,6 +1,6 @@
 {
   "name": "ngx-text-editor",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "WYSIWYG Editor for Angular 2+",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "docs:build": "compodoc -p tsconfig.json -n ngx-text-editor -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
-    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "lint": "tslint --project tsconfig.json src/**/*.ts",
     "publish": "npm publish dist",
     "test": "tsc && karma start"
   },

@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [2.1.1]
+### Changed
+- Changed ViewChild to static by [jrquick17](https://github.com/jrquick17)
+
 ## [2.1.0]
 ### Changed
 - Renamed files, components, modules, etc for consistency by [jrquick17](https://github.com/jrquick17)
