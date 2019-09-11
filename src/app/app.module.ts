@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
-import {NgxEditorModule} from './ngx-text-editor/ngx-text-editor.module';
+import {NgxTextEditorModule} from './ngx-text-editor/ngx-text-editor.module';
 
 @NgModule({
   bootstrap: [
@@ -16,7 +16,7 @@ import {NgxEditorModule} from './ngx-text-editor/ngx-text-editor.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxEditorModule,
+    NgxTextEditorModule,
     FormsModule
   ],
   providers: []
