@@ -15,9 +15,9 @@ import {NgxTextEditorModule} from './ngx-text-editor/ngx-text-editor.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
-    NgxTextEditorModule,
-    FormsModule
+    NgxTextEditorModule
   ],
   providers: []
 })

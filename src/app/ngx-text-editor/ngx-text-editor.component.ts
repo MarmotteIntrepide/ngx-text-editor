@@ -92,8 +92,8 @@ export class NgxTextEditorComponent implements OnInit, ControlValueAccessor {
   /** emits `uploadImage` event when image is selected */
   @Output() uploadImage:EventEmitter<HTMLInputElement> = new EventEmitter<HTMLInputElement>();
 
-  @ViewChild('ngxTextArea', { static: false }) textArea:any;
-  @ViewChild('ngxWrapper', { static: false }) ngxWrapper:any;
+  @ViewChild('ngxTextArea', { static: true }) textArea:any;
+  @ViewChild('ngxWrapper', { static: true }) ngxWrapper:any;
 
   public Utils:any = Utils;
 
