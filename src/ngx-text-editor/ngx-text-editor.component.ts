@@ -1,11 +1,11 @@
 import {Component, OnInit, Input, Output, ViewChild, EventEmitter, Renderer2, forwardRef, ElementRef} from '@angular/core';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
-import {CommandExecutorService} from './common/services/command-executor.service';
-import {MessageService} from './common/services/message.service';
+import {CommandExecutorService} from '../common/services/command-executor.service';
+import {MessageService} from '../common/services/message.service';
 
-import {ngxTextEditorConfig} from './common/ngx-text-editor.defaults';
-import * as Utils from './common/utils/ngx-text-editor.utils';
+import {ngxTextEditorConfig} from '../common/ngx-text-editor.defaults';
+import * as Utils from '../common/utils/ngx-text-editor.utils';
 
 @Component({
   selector:    'ngx-text-editor',
