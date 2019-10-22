@@ -17,6 +17,9 @@
 
 This is an Angular 2+ WYSIWYG component.  
 
+* Visit the [demo](https://ngx-text-editor.jrquick.com) to see it in action!
+* Visit [my website](https://jrquick.com) for other cool projects!
+
 ## Setup
 
 ### Installation
@@ -54,10 +57,6 @@ For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 ## Issues ##
 
 If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ngx-text-editor/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
-
-## Demo
-
-Demo at stackblitz [ngx-text-editor](https://ngx-text-editor.stackblitz.io/)
 
 ## Documentation
 
