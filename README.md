@@ -1,4 +1,6 @@
-# NgxTextEditor
+# ngx-text-editor
+
+![](example.png)
 
 ## Index ##
 
