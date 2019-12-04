@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [2.2.0]
+### Changed
+- Use textarea instead of div to fix on iPhone by [jrquick17](https://github.com/jrquick17)
+
 ## [2.1.2]
 ### Changed
-- Compatible with Ivy [jrquick17](https://github.com/jrquick17)
+- Compatible with Ivy by [jrquick17](https://github.com/jrquick17)
 
 ## [2.1.1]
 ### Changed
