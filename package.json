@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "ng-packagr -p package.json && mkdir dist/styles && cp -r src/assets/styles/* dist/styles/",
-    "demo": "cd demo && && ng serve",
+    "demo": "cd demo && ng serve",
     "demo:build": "npm run build && cd demo && npm install && cp -fr ../dist/* node_modules/ngx-text-editor/ && ng build",
     "demo:run": "npm run demo:build && npm run demo",
     "docs": "npm run docs:build",
