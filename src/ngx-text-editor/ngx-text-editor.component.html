@@ -9,11 +9,11 @@
                            (execute)="executeCommand($event)"
                            (uploadImage)="onUploadImage($event)"></ngx-text-editor-toolbar>
 
-  <!-- text area -->
   <div #ngxWrapper
        class="ngx-wrapper">
     <textarea #ngxTextArea
               class="ngx-text-editor-textarea"
+              [placeholder]="placeholder || config['placeholder']"
               [attr.contenteditable]="config['editable']"
               (input)="onContentChange($event.target.innerHTML)"
               [attr.translate]="config['translate']"
@@ -23,10 +23,6 @@
               [style.resize]="Utils?.canResize(resizer)"
               (focus)="onTextAreaFocus()"
               (blur)="onTextAreaBlur()"></textarea>
-
-    <span class="ngx-text-editor-placeholder">
-      {{ placeholder || config['placeholder'] }}
-    </span>
   </div>
 
   <ngx-text-editor-message></ngx-text-editor-message>
