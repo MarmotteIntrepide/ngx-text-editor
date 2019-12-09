@@ -15,7 +15,7 @@
               class="ngx-text-editor-textarea"
               [placeholder]="placeholder || config['placeholder']"
               [attr.contenteditable]="config['editable']"
-              (input)="onContentChange($event.target.innerHTML)"
+              (input)="onContentChange($event)"
               [attr.translate]="config['translate']"
               [attr.spellcheck]="config['spellcheck']"
               [style.height]="config['height']"
