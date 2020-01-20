@@ -1,8 +1,8 @@
 # ngx-text-editor
 
 [![npm](https://img.shields.io/npm/l/ngx-text-editor.svg)](https://www.npmjs.com/package/ngx-text-editor/)
-[![npm](https://img.shields.io/npm/dtngx-text-editore.svg)](https://www.npmjs.com/package/ngx-text-editor)
-[![npm](https://img.shields.io/npm/dmngx-text-editore.svg)](https://www.npmjs.com/package/ngx-text-editor)
+[![npm](https://img.shields.io/npm/dtngx-text-editor.svg)](https://www.npmjs.com/package/ngx-text-editor)
+[![npm](https://img.shields.io/npm/dmngx-text-editor.svg)](https://www.npmjs.com/package/ngx-text-editor)
 
 ![](example.png)
 
