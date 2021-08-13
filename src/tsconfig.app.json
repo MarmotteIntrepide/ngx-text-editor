@@ -7,8 +7,7 @@
     ]
   },
   "files": [
-    "main.ts",
-    "polyfills.ts"
+    "ngx-text-editor.module.ts"
   ],
   "include": [
     "src/**/*.d.ts"

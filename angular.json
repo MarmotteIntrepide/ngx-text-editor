@@ -20,7 +20,7 @@
             "aot": true,
             "outputPath": "dist/ngx-text-editor",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/ngx-text-editor.module.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
