@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [3.0.0]
+### Changed
+- Update to ng 9 by [jrquick17](https://github.com/jrquick17)
+
 ## [2.2.0]
 ### Changed
 - Use textarea instead of div to fix on iPhone by [jrquick17](https://github.com/jrquick17)
