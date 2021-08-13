@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [3.2.0]
+### Changed
+- Update to ng 11 by [jrquick17](https://github.com/jrquick17)
+
 ## [3.1.0]
 ### Changed
 - Update to ng 10 by [jrquick17](https://github.com/jrquick17)
