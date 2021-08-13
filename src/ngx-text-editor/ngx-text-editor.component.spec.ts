@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxTextEditorComponent } from './ngx-text-editor.component';
@@ -13,7 +13,7 @@ describe('NgxTextEditorComponent', () => {
   let component: NgxTextEditorComponent;
   let fixture: ComponentFixture<NgxTextEditorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule, ReactiveFormsModule, PopoverModule.forRoot(), HttpClientModule],
       providers: [MessageService, CommandExecutorService],
