@@ -32,9 +32,13 @@ For Angular 2-7:
 
 `npm install ngx-text-editor@^1.0.0 --save`
 
-For Angular 8+:
+For Angular 8:
 
-`npm install ngx-text-editor --save`
+`npm install ngx-text-editor@^2 --save`
+
+For Angular 9+:
+
+`npm install ngx-text-editor@^3^ --save`
 
 ### Documentation
 
