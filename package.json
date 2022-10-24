@@ -50,9 +50,7 @@
   "peerDependencies": {
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "~8.0.0",
-    "rxjs": "^7.4.0"
-  },
-  "dependencies": {
+    "rxjs": "^7.4.0",
     "@angular/animations": "~13.3.11",
     "@angular/common": "~13.3.11",
     "@angular/compiler": "~13.3.11",
@@ -61,16 +59,18 @@
     "@angular/platform-browser": "~13.3.11",
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/platform-server": "~13.3.11",
-    "@angular/router": "~13.3.11",
+    "@angular/router": "~13.3.11"
+  },
+  "dependencies": {
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.0",
-    "@angular-devkit/core": "~13.0.0",
-    "@angular-devkit/schematics": "~13.0.0",
+    "@angular-devkit/build-angular": "^13.0.4",
+    "@angular-devkit/core": "^13.0.4",
+    "@angular-devkit/schematics": "^13.0.4",
     "ng-packagr": "^13.3.1",
-    "@angular/cli": "~13.0.0",
-    "@angular/compiler-cli": "~13.0.0",
+    "@angular/cli": "^13.0.4",
+    "@angular/compiler-cli": "^13.0.4",
     "@compodoc/compodoc": "^1.1.14",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "^2.0.10",

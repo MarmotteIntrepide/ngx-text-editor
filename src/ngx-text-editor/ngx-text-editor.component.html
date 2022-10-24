@@ -1,31 +1,27 @@
-<div class="ngx-text-editor"
-     id="ngxTextEditor"
-     [style.width]="config['width']"
-     [style.minWidth]="config['minWidth']"
-     tabindex="0"
-     (focus)="onEditorFocus()">
+<div class="ngx-text-editor" id="ngxTextEditor" [style.width]="config['width']" [style.minWidth]="config['minWidth']"
+   tabindex="0" (focus)="onEditorFocus()">
 
-  <ngx-text-editor-toolbar [config]="config"
-                           (execute)="executeCommand($event)"
-                           (uploadImage)="onUploadImage($event)"></ngx-text-editor-toolbar>
+   <ngx-text-editor-toolbar [config]="config" (execute)="executeCommand($event)" (uploadImage)="onUploadImage($event)">
+   </ngx-text-editor-toolbar>
 
-  <div #ngxWrapper
-       class="ngx-wrapper">
-    <textarea #ngxTextArea
-              class="ngx-text-editor-textarea"
-              [placeholder]="placeholder || config['placeholder']"
-              [attr.contenteditable]="config['editable']"
-              (input)="onContentChange($event)"
-              [attr.translate]="config['translate']"
-              [attr.spellcheck]="config['spellcheck']"
-              [style.height]="config['height']"
-              [style.minHeight]="config['minHeight']"
-              [style.resize]="Utils?.canResize(resizer)"
-              (focus)="onTextAreaFocus()"
-              (blur)="onTextAreaBlur()"></textarea>
-  </div>
+   <div #ngxWrapper class="ngx-wrapper">
+      <textarea #ngxTextArea class="ngx-text-editor-textarea" [placeholder]="placeholder || config['placeholder']"
+         [attr.contenteditable]="config['editable']" (input)="onContentChange($event)"
+         [attr.translate]="config['translate']" [attr.spellcheck]="config['spellcheck']"
+         [style.height]="config['height']" [style.minHeight]="config['minHeight']"
+         [style.resize]="Utils?.canResize(resizer)" (focus)="onTextAreaFocus()" (blur)="onTextAreaBlur()"></textarea>
+   </div>
 
-  <ngx-text-editor-message></ngx-text-editor-message>
+   <ngx-text-editor-message></ngx-text-editor-message>
 
-  <ngx-grippie *ngIf="resizer === 'stack'"></ngx-grippie>
+   <div class="ngx-text-editor-grippie" *ngIf="resizer === 'stack'">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate"
+         viewBox="651.6 235 26 5" width="26" height="5">
+         <g id="sprites">
+            <path
+               d=" M 651.6 235 L 653.6 235 L 653.6 237 L 651.6 237 M 654.6 238 L 656.6 238 L 656.6 240 L 654.6 240 M 660.6 238 L 662.6 238 L 662.6 240 L 660.6 240 M 666.6 238 L 668.6 238 L 668.6 240 L 666.6 240 M 672.6 238 L 674.6 238 L 674.6 240 L 672.6 240 M 657.6 235 L 659.6 235 L 659.6 237 L 657.6 237 M 663.6 235 L 665.6 235 L 665.6 237 L 663.6 237 M 669.6 235 L 671.6 235 L 671.6 237 L 669.6 237 M 675.6 235 L 677.6 235 L 677.6 237 L 675.6 237"
+               fill="rgb(147,153,159)" />
+         </g>
+      </svg>
+   </div>
 </div>
